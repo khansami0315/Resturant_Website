@@ -5,15 +5,15 @@ import { About } from './pages/About'
 import { Country } from './pages/Country'
 import { Contact } from './pages/Contact'
 import { ErrorPage } from './Ul/ErrorPage'
-import { CountryDedtalis } from './Components/Layouts/CountryDetalis'
-import { AppLayout } from './Components/Layouts/Applayout'
+import { CountryDedtalis } from './components/layouts/CountryDetalis'
+import Applayout from './Components/Layouts/Applayout'
 
 // Use 'router' here instead of 'route'
 const router = createBrowserRouter([
 
   {
     path: "/",
-    element:  <AppLayout/>,
+    element:  <Applayout/>,
     errorElement :<ErrorPage/>,
     children : [
 

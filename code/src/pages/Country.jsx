@@ -76,7 +76,7 @@
 import { useEffect, useState, useTransition } from "react";
 import { getCountryData } from "../api/postApi";
 import { Loader } from "../Ul/Loader";
-import { CountryCard } from "../Components/Layouts/CountryCard";
+import { CountryCard } from "../components/layouts/CountryCard";
 import "./Country.css";
 import { SearchFilter } from "../Ul/SearchFilter";
 
