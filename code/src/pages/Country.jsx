@@ -8,7 +8,7 @@
 // export const Country = () => {
 //   const [isPending, startTransition] = useTransition();
 //   const [countries, setCountries] = useState([]);
-  
+
 //   const [search, setSearch] = useState("");
 // const [filter, setFilter] = useState("all");
 
@@ -41,9 +41,8 @@
 //      return  country.region   ===  filter;
 //   };
 
-
 //   //Here is the main Logic
-  
+
 //   const filtercountries  =  countries.filter((country)=>searchCountry(country) && filterRegion(country));
 //   return (
 //     <>
@@ -55,7 +54,7 @@
 //         countries ={countries}
 //          setCountries={setCountries}
 //       />
-  
+
 //       <section className="country-section">
 //         <ul className="grid grid-four-cols">
 //           {filtercountries.map((curCountry, index) => (
@@ -65,18 +64,12 @@
 //       </section>
 //     </>
 //   );
-  
-
 
 // };
-
-
-
 
 import { useEffect, useState, useTransition } from "react";
 import { getCountryData } from "../api/postApi";
 import { Loader } from "../Ul/Loader";
-import { CountryCard } from "../components/layouts/CountryCard";
 import "./Country.css";
 import { SearchFilter } from "../Ul/SearchFilter";
 
@@ -128,7 +121,7 @@ export const Country = () => {
         countries={countries}
         setCountries={setCountries}
       />
-  
+
       <section className="country-section">
         <ul className="grid grid-four-cols">
           {filteredCountries.length > 0 ? (
