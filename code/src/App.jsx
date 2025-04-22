@@ -5,8 +5,8 @@ import { About } from './pages/About'
 import { Country } from './pages/Country'
 import { Contact } from './pages/Contact'
 import { ErrorPage } from './Ul/ErrorPage'
-import { CountryDedtalis } from './components/layouts/CountryDetalis'
 import {AppLayout} from "./components/layouts/AppLayout"
+import { CountryDetails } from "./components/layouts/CountryDetails"
 // Use 'router' here instead of 'route'
 const router = createBrowserRouter([
 
@@ -37,7 +37,7 @@ const router = createBrowserRouter([
 
       {
         path: "/Country/:id",
-        element: <CountryDedtalis/>
+        element: <CountryDetails/>
       },
     ]
   }
