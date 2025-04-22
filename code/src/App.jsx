@@ -5,7 +5,7 @@ import { About } from './pages/About'
 import { Country } from './pages/Country'
 import { Contact } from './pages/Contact'
 import { ErrorPage } from './Ul/ErrorPage'
-import { CountryDedtalis } from './components/layouts/CountryDetalis'
+import { CountryDedtalis } from './Components/Layouts/CountryDetalis'
 import Applayout from './Components/Layouts/Applayout'
 
 // Use 'router' here instead of 'route'
