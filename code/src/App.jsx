@@ -1,22 +1,17 @@
-import { createBrowserRouter, RouterProvider } from 'react-router-dom'
-import './App.css'
-import { Home } from './pages/Home'
-import { About } from './pages/About'
-import { Country } from './pages/Country'
-import { Contact } from './pages/Contact'
-import { ErrorPage } from './Ul/ErrorPage'
-import { CountryDetails } from "./components/layouts/CountryDetails"
-import AppLayout from './components/layouts/AppLayout'
+import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import "./App.css";
+import { About } from "./pages/About";
+import { Contact } from "./pages/Contact";
+import { Country } from "./pages/Country";
+import { Home } from "./pages/Home";
+import { ErrorPage } from "./Ul/ErrorPage";
 // Use 'router' here instead of 'route'
 const router = createBrowserRouter([
-
   {
     path: "/",
-    element:  <AppLayout/>,
-    errorElement :<ErrorPage/>,
-    children : [
-
-
+    element: <AppLayout />,
+    errorElement: <ErrorPage />,
+    children: [
       {
         path: "/",
         element: <Home />,
@@ -27,27 +22,24 @@ const router = createBrowserRouter([
       },
       {
         path: "/country",
-        element: <Country />
+        element: <Country />,
       },
-    
+
       {
         path: "/Contact",
-        element: <Contact/>
+        element: <Contact />,
       },
 
       {
         path: "/Country/:id",
-        element: <CountryDetails/>
+        element: <CountryDetails />,
       },
-    ]
-  }
-  
-])
+    ],
+  },
+]);
 
 function App() {
-  return (
-    <RouterProvider router={router} />
-  )
+  return <RouterProvider router={router} />;
 }
 
-export default App
+export default App;

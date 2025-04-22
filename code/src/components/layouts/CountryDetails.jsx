@@ -3,7 +3,7 @@ import { NavLink, useParams } from "react-router-dom";
 import { getCountryIndviDetails } from "../../api/postApi";
 import { Loader } from "../../Ul/Loader";
 
-export const CountryDetails = () => {
+const CountryDetails = () => {
   const params = useParams();
   const [isPending, startTransition] = useTransition();
   const [country, setCountry] = useState(null); // changed from [] to null
@@ -41,14 +41,13 @@ export const CountryDetails = () => {
               <p>Population: {country.population?.toLocaleString()}</p>
               {/* Add more info if needed */}
 
-
               <p>
-  <span className="card-description">
-    Language: {country.languages && Object.values(country.languages).join(", ")}
-  </span>
-</p>
-
-
+                <span className="card-description">
+                  Language:{" "}
+                  {country.languages &&
+                    Object.values(country.languages).join(", ")}
+                </span>
+              </p>
             </div>
           </div>
         </div>
@@ -56,24 +55,10 @@ export const CountryDetails = () => {
           <NavLink to="/Country" className="backbtn">
             <button>GO Back</button>
           </NavLink>
-
         </div>
       </div>
     </section>
   );
 };
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+export default CountryDetails;
